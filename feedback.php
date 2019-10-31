@@ -85,7 +85,7 @@ $run = mysqli_query($cn, $query);
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                   <div class="item active">
-                    <img src="../../Wissen/Images/background-cover.jpg" alt="Chania">
+                    <img src="./Images/background-cover.jpg" alt="Chania">
                     <div class="carousel-caption">
                       <h3>Los Angeles</h3>
                       <p>LA is always so much fun!</p>
@@ -93,7 +93,7 @@ $run = mysqli_query($cn, $query);
                   </div>
               
                   <div class="item">
-                    <img src="../../Wissen/Images/background-cover1.jpg" alt="Chicago">
+                    <img src="./Images/background-cover1.jpg" alt="Chicago">
                     <div class="carousel-caption">
                       <h3>Chicago</h3>
                       <p>Thank you, Chicago!</p>
@@ -101,7 +101,7 @@ $run = mysqli_query($cn, $query);
                   </div>
               
                   <div class="item">
-                    <img src="../../Wissen/Images/background-cover3.jpg" alt="New York">
+                    <img src="./Images/background-cover3.jpg" alt="New York">
                     <div class="carousel-caption">
                       <h3>New York</h3>
                       <p>We love the Big Apple!</p>
