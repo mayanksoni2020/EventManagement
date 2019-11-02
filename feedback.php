@@ -50,8 +50,10 @@ $run = mysqli_query($cn, $query);
 ?>
 <script>
         btn.addEventListener("click",alertMessage)
+        if($fname && $lname && $email && $feedback){
         function alertMessage(){
             alert("Thanks for your Feedback!")
+        }
         }
         function remove(){
             btn.removeEventListener("click",alertMessage)

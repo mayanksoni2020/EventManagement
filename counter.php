@@ -18,7 +18,7 @@
             <img src="./Images/network.svg" alt="Image" style="width: 100%; height: 100px;">
           </div>
           <div class="col-md-12">
-            <h1 style="color: white; display: inline-block;" class="timer count-title count-number" data-to="280" data-speed="1500"></h1>
+            <h1 style="color: white; display: inline-block;" class="timer count-title count-number" data-to="2800" data-speed="1500"></h1>
             <h1 style="color: white; display: inline-block;">+</h1>
           </div>
           <div class="col-md-12">

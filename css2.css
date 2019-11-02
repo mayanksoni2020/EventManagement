@@ -387,7 +387,7 @@ header::after{
     align-items: center;
     margin: 0px 10%;
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     z-index:900;
     font-family: 'Poppins', sans-serif;
 }
