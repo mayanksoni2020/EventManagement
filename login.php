@@ -102,6 +102,7 @@ No account yet?<a href="Sign.php">SIGN UP</a>
                     <input type="submit" name="try" value="LOGIN" readonly style="font-size: 1.6rem; letter-spacing: 1px; background-color: #34A853; font-weight: bold; color: white;"><br><br><br>
                     <p>No account yet? <a href="Sign.php" style="color: black; text-decoration: none;"><u>SIGN UP</u></a></p>
                 </form>
+                <!-- comment out -->
             </div>
         </div>
     </div>
