@@ -1,6 +1,6 @@
 <?php
  
-include('config.php');
+// include('config.php');
 session_start();
 $qwe='';
 if(isset($_SESSION['ab'])){
@@ -71,20 +71,6 @@ return true;
 </head>
 <body style="background-color: #f1f1f1;">
     <?php include('header.php'); ?>
-<!-- <p id="result" style="margin-top: 200px;"></p>
-<form name="new1" action="login.php" onsubmit="return validatefrg()" method="post" style="background-image: url('black.jpg');width:40%;border:6px solid white;margin-left:27%;font-family:aerial;font-weight:bold;color:white;font-size:24px;padding-top:30px;padding-bottom:30px;padding-left:50px;padding-right:50px;">
-<h3>Enter your user id/email and password</h3><br>
-<h4><?=$qwe?></h4>
-User Email<input style="font-family:aerial;font-weight:bold;color:white;" type="text" name="email"/><br>
-&nbsp;&nbsp;&nbsp;Password<input style="font-family:aerial;font-weight:bold;color:white;" type="password" name="password"/><br>
-
-
-<input style=";margin-top:2%"; type="submit" name="try" value="LOGIN" readonly> 
-<br><br>
-No account yet?<a href="Sign.php">SIGN UP</a>
-
-
-</form> -->
 
     <div class="container">
         <div class="row" style="padding: 20% 35%;">
@@ -92,7 +78,7 @@ No account yet?<a href="Sign.php">SIGN UP</a>
                 <div class="login-container">
                     <h2>Login</h2>
                 </div>
-
+               
                 <form class="form-container" name="new1" action="login.php" onsubmit="return validatefrg()" method="post">
                     <?=$qwe?>
                     <p>User Email</p>
