@@ -1,6 +1,6 @@
 <?php
  
-// include('config.php');
+include('config.php');
 session_start();
 $qwe='';
 if(isset($_SESSION['ab'])){
@@ -80,7 +80,7 @@ return true;
                 </div>
                
                 <form class="form-container" name="new1" action="login.php" onsubmit="return validatefrg()" method="post">
-                    <?=$qwe?>
+                    <h4><?=$qwe?></h4>
                     <p>User Email</p>
                     <input type="text" name="email" placeholder="Your Email"/><br><br>
                     <p>Password</p>
@@ -88,7 +88,7 @@ return true;
                     <input type="submit" name="try" value="LOGIN" readonly style="font-size: 1.6rem; letter-spacing: 1px; background-color: #34A853; font-weight: bold; color: white;"><br><br><br>
                     <p>No account yet? <a href="Sign.php" style="color: black; text-decoration: none;"><u>SIGN UP</u></a></p>
                 </form>
-                <!-- comment out -->
+                
             </div>
         </div>
     </div>
