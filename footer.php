@@ -11,11 +11,11 @@
             <div class="col-md-6 col-sm-6" id="footer-link" style="padding-left: 80px; padding-top: 20px;">
             <div class="col-md-4 col-sm-4" id="footer-links">
                 <h4>Company</h4>
-                <a href="#" style="color: #888; text-decoration: none;"><li>About us</li></a>
+                <a href="./project/about us.php" style="color: #888; text-decoration: none;"><li>About us</li></a>
                 <a href="contactus.php" style="color: #888; text-decoration: none;"><li>Contact us</li></a>
                 <a href="events.php" style="color: #888; text-decoration: none;"><li>Events</li></a>
-                <a href="workwithus.php" style="color: #888; text-decoration: none;"><li>Work with us</li>
-                <li>Blog</li>
+                <a href="workwithus.php" style="color: #888; text-decoration: none;"><li>Work with us</li></a>
+                <a href="./project/blog.php" style="color: #888; text-decoration: none;"><li>Blog</li></a>
                 <li>Press</li>
             </div>
             <div class="col-md-4 col-sm-4" id="footer-links">
