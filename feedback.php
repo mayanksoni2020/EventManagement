@@ -2,7 +2,7 @@
     <div class="feedback-main">
         <div class="col-md-12 col-sm-12">
             <div class="col-md-6 col-sm-6">
-                <div class="col-md-12 col-sm-12 clearfix wow slideInLeft" id="feedback-left">
+                <div class="col-md-12 col-sm-12" id="feedback-left">
                     <div class="feedback-desc">
                         <h1>Help us<br>improve<br>with your<br>suggestions</h1>
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" style="padding: 15px 25px; font-size: 18px;">Give Your Feedback</button>
@@ -50,11 +50,11 @@ $run = mysqli_query($cn, $query);
 ?>
 <script>
         btn.addEventListener("click",alertMessage)
-        //if($fname && $lname && $email && $feedback){
+        if($fname && $lname && $email && $feedback){
         function alertMessage(){
             alert("Thanks for your Feedback!")
         }
-        //}
+        }
         function remove(){
             btn.removeEventListener("click",alertMessage)
         }
