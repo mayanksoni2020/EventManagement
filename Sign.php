@@ -17,7 +17,7 @@ var y=document.forms["new"]["last_name"].value;
 var z=document.forms["new"]["password"].value;
 var w=document.forms["new"]["email"].value;
 var a=document.forms["new"]["gender"].value;
-
+var pas= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 
 
 if(x==""){
@@ -31,6 +31,10 @@ return false;
 else if(z==""){
 alert("Password must be filled out");
 return false;
+}
+else if(!z.match(pas)){ 
+alert("pasword should be consist of 6 to 20 characters with atleast one numeric digit, one uppercase and one lowercase letter"); 
+return false; 
 }
 else if(w==""){
 alert("email must be filled out");

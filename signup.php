@@ -13,7 +13,9 @@ if (isset($_POST['reg_user'])) {
     $query->execute();
  
     if ($query->rowCount() > 0) {
-        echo '<p class="error">The email address is already registered!</p><a href="Signup.html">Back to signup</a>';
+        //echo '<p class="error">The email address is already registered!</p><a href="Sign.php"></a>';
+        echo '<script>alert("This email is already registered")</script>';
+        include('Sign.php');
     }
  
     if ($query->rowCount() == 0) {
@@ -25,7 +27,7 @@ if (isset($_POST['reg_user'])) {
         if ($result) {
             header("Location:login.php");
         } else {
-            echo '<p class="error">Something went wrong!</p><a href="Signup.html">Back to signup</a>';
+            echo '<p class="error">Something went wrong!</p><a href="Sign.php"></a>';
         }
     }
 }
