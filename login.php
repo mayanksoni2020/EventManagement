@@ -1,99 +1,61 @@
-<?php
- 
-include('config.php');
-session_start();
-$qwe='';
-if(isset($_SESSION['ab'])){
-    $qwe=$_SESSION['ab'];
-    unset($_SESSION['ab']);
-}
-if (isset($_POST['try'])) {
- 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
- 
-    $query = $connection->prepare("SELECT * FROM logindata WHERE email=:email AND password=:password");
-    $query->bindParam("email", $email, PDO::PARAM_STR);
-    $query->bindParam("password", $password, PDO::PARAM_STR);
-    $query->execute();
- 
-    $result = $query->fetch(PDO::FETCH_ASSOC);
- 
-    if (!$result) {
-        $_SESSION['ab']='email password combination is wrong!';
-        header("Location: login.php");
-    } else {
-        $_SESSION['id']=$result['ID'];
-        $_SESSION['email']=$result['email'];
-        $_SESSION['success']="done";
-        header("Location: chat.php");
-    }
-}
-else
-{ 
- ?>
+<?php include('signupuser.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css3.css">
     <link rel="shortcut icon" href="https://img.icons8.com/nolan/64/000000/graduation-cap.png">
-    <link rel="stylesheet" href="css2.css" type="text/css"/>
-    <link rel="stylesheet" href="style2.css" type="text/css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <title>Login</title>
 
-<script>
-function validatefrg() {
-var d=document.forms["new1"]["password1"].value;
-var e=document.forms["new1"]["email1"].value;
-
-
-if(e==""){
-alert("email must be filled out");
-return false;
-}
-if(e.indexOf('@') <= 0){
-alert("Please fill the email in proper format");
-return false;
-}
-if((e.charAt(e.length-3)!='.')&&(e.charAt(e.length-4)!='.')){
-alert("Please fill the email in proper format");
-return false;
-}
-if(d==""){
-alert("Password must be filled out");
-return false;
-}
-return true;
+    <style>
+#inside-login-container{
+    background-color: #4285F4;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 25px 50px -12px;
 
 }
-</script>
+.login-container{
+    text-align: center;
+    background-color: rgb(49, 109, 206);
+    padding: 10px;
+    color: white;
+}
+.form-container{
+    padding: 30px;
+    color: white;    
+}
+    </style>
+
 </head>
-<body style="background-color: #f1f1f1;">
+
+<body style="background-color: #f1f1f1; overflow-y: hidden;">
     <?php include('header.php'); ?>
 
     <div class="container">
-        <div class="row" style="padding: 20% 35%;">
+        <div class="row" style="padding: 15% 35%;">
             <div class="col-md-12 col-sm-12" id="inside-login-container">
                 <div class="login-container">
                     <h2>Login</h2>
                 </div>
                
-                <form class="form-container" name="new1" action="login.php" onsubmit="return validatefrg()" method="post">
-                    <h4><?=$qwe?></h4>
-                    <p>User Email</p>
-                    <input type="text" name="email" placeholder="Your Email"/><br><br>
+                <form class="form-container" action="login.php" method="post">
+                <?php include('errors.php'); ?>
+
+                    <p>UserName</p>
+                    <input type="text" name="username" placeholder="User Name"/><br><br>
                     <p>Password</p>
-                    <input type="password" name="password" placeholder="Your Password"/><br><br><br>
-                    <input type="submit" name="try" value="LOGIN" readonly style="font-size: 1.6rem; letter-spacing: 1px; background-color: #34A853; font-weight: bold; color: white;"><br><br><br>
-                    <p>No account yet? <a href="Sign.php" style="color: black; text-decoration: none;"><u>SIGN UP</u></a></p>
+                    <input type="password" name="password" placeholder="User Password"/><br><br><br>
+                    <input type="submit" value="LOGIN" name="login_user" style="font-size: 1.6rem; letter-spacing: 1px; background-color: #34A853; font-weight: bold; color: white;"><br><br>
+                    <p>No an account yet? <a href="signup.php" style="color: black; text-decoration: none; font-weight: bold;">SIGN UP</a></p>
                 </form>
                 
             </div>
         </div>
     </div>
 </body>
+
 </html>
- <?php
-}
- ?>
