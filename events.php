@@ -20,7 +20,7 @@
 <!-- Project Javascript Starts -->
 
 <script type="text/javascript">
-var startDateTime = new Date(2020,4,12,9,1,0,0); // YYYY (M-1) D H m s (start time and date from DB)
+var startDateTime = new Date(2020,4,12,9,1,0,0); // YYYY (M-1) D H m s (start time and date from DB);
 var startStamp = startDateTime.getTime();
 
 var newDate = new Date();
